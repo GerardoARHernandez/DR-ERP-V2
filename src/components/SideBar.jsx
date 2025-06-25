@@ -1,68 +1,74 @@
 import { NavLink } from 'react-router-dom';
 import FotoPerfil from '/Perfil.png';
+import { AiOutlineHome } from 'react-icons/ai';
+import { HiMiniUsers } from 'react-icons/hi2';
+import { MdChecklist } from 'react-icons/md';
+import { BsCalendar3 } from 'react-icons/bs';
 
 const SideBar = () => {
     return ( 
-        <div className="shadow-[rgba(60,64,67,0.3)_0px_1px_2px_0px,rgba(60,64,67,0.15)_0px_2px_6px_2px] p-5 rounded-3xl h-full">
-            <div className="flex items-center gap-4">
-                <div>
-                    <img src={FotoPerfil} className='w-12' alt="Foto de perfil"/>
+        <div className="bg-white shadow-gray-700 shadow-md p-5 rounded-3xl h-full w-72 transition-all duration-300">
+            {/* Sección de perfil */}
+            <div className="flex items-center gap-4 p-4 hover:bg-gray-50 rounded-xl transition-colors duration-200">
+                <div className="p-1 bg-gray-100 rounded-full">
+                    <img src={FotoPerfil} className='w-13 h-13 rounded-full object-cover' alt="Foto de perfil"/>
                 </div>
                 <div>
-                    <h1 className="text-sm font-bold m-0">Doctor</h1>
-                    <p className="m-0 text-xs">
+                    <h1 className="text-lg font-semibold m-0 text-gray-800">Doctor</h1>
+                    <p className="m-0 text-gray-500">
                         Dr. Standart
                     </p>
                 </div>
             </div>
 
-            <hr className="border-[#dfdfdf6e] my-4"/>
+            <hr className="border-gray-800 mt-0 mb-8"/>
 
-            <div className='py-3'>
+            {/* Menú de navegación */}
+            <nav className='space-y-2'>
                 <NavLink 
                     className={({isActive}) => 
-                        `w-full text-left py-2 px-3 rounded-xl flex gap-3 border-2 mb-3 font-medium no-underline 
-                        ${isActive ? 'bg-[#4a8aa2] border-[#366576] text-white' : 'bg-transparent text-[#3f3f3f]'}`
+                        `flex items-center gap-3 p-3 rounded-lg font-medium no-underline transition-colors duration-200
+                        ${isActive ? 'bg-[#4a8aa2] text-white shadow-md font-semibold border-2 border-blue-950' : 'text-gray-600 hover:bg-gray-700 hover:text-white'}`
                     } 
                     to={'/'}
                 >
-                    <i className="bi bi-house"></i>
-                    Home
+                    <AiOutlineHome className="text-lg" />
+                    <span>Home</span>
                 </NavLink>
 
-                <NavLink 
+                 <NavLink 
                     className={({isActive}) => 
-                        `w-full text-left py-2 px-3 rounded-xl flex gap-3 border-2 mb-3 font-medium no-underline 
-                        ${isActive ? 'bg-[#4a8aa2] border-[#366576] text-white' : 'bg-transparent text-[#3f3f3f]'}`
+                        `flex items-center gap-3 p-3 rounded-lg font-medium no-underline transition-colors duration-200
+                        ${isActive ? 'bg-[#4a8aa2] text-white shadow-md font-semibold border-2 border-blue-950' : 'text-gray-600 hover:bg-gray-700 hover:text-white'}`
                     } 
                     to={'/pacientes'}
                 >
-                    <i className="bi bi-people-fill"></i>
-                    Pacientes
+                    <HiMiniUsers className="text-lg" />
+                    <span>Pacientes</span>
                 </NavLink>
                 
                 <NavLink 
                     className={({isActive}) => 
-                        `w-full text-left py-2 px-3 rounded-xl flex gap-3 border-2 mb-3 font-medium no-underline 
-                        ${isActive ? 'bg-[#4a8aa2] border-[#366576] text-white' : 'bg-transparent text-[#3f3f3f]'}`
+                        `flex items-center gap-3 p-3 rounded-lg font-medium no-underline transition-colors duration-200
+                        ${isActive ? 'bg-[#4a8aa2] text-white shadow-md font-semibold border-2 border-blue-950' : 'text-gray-600 hover:bg-gray-700 hover:text-white'}`
                     } 
                     to={'/consultas'}
                 >
-                    <i className="bi bi-card-checklist"></i>
+                   <MdChecklist />
                     Consultas
                 </NavLink>
                 
                 <NavLink 
                     className={({isActive}) => 
-                        `w-full text-left py-2 px-3 rounded-xl flex gap-3 border-2 mb-3 font-medium no-underline 
-                        ${isActive ? 'bg-[#4a8aa2] border-[#366576] text-white' : 'bg-transparent text-[#3f3f3f]'}`
+                        `flex items-center gap-3 p-3 rounded-lg font-medium no-underline transition-colors duration-200
+                        ${isActive ? 'bg-[#4a8aa2] text-white shadow-md font-semibold border-2 border-blue-950' : 'text-gray-600 hover:bg-gray-700 hover:text-white'}`
                     } 
                     to={'/citas'}
                 >
-                    <i className="bi bi-calendar3"></i>
+                    <BsCalendar3 />
                     Citas
                 </NavLink>
-            </div>
+            </nav>
         </div>
     );
 }

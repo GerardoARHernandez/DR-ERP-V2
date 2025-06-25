@@ -1,3 +1,6 @@
+import { BsPrinter } from "react-icons/bs";
+import { CiSaveDown1 } from "react-icons/ci";
+
 const ConsultaActual = () => {
     return ( 
         <div className="container p-4">
@@ -5,13 +8,13 @@ const ConsultaActual = () => {
 
             <div className="bg-white p-4 border rounded-lg">
                 <form>
-                    <div className="flex justify-center mb-4 gap-5">
-                        <button className="px-4 py-2 bg-blue-600 text-white rounded flex items-center">
-                            <i className="bi bi-download mr-2"></i>
-                            Guardar 
+                    <div className="flex items-center justify-center mb-4 gap-5">
+                        <button className="px-4 py-2 bg-[#4a8aa2] hover:bg-[#3f7a8c] font-medium text-white rounded flex items-center hover:cursor-pointer">
+                            <CiSaveDown1 className="text-xl mr-1"/>
+                            <span>Guardar</span>
                         </button>
-                        <button className="px-4 py-2 bg-gray-600 text-white rounded flex items-center">
-                            <i className="bi bi-printer mr-2"></i>
+                        <button className="px-4 py-2 bg-gray-800 text-white rounded flex items-center font-medium hover:cursor-pointer hover:bg-gray-700 transition-colors">
+                            <BsPrinter className="text-lg mr-2"/>
                             Imprimir
                         </button>
                     </div>
@@ -75,7 +78,7 @@ const ConsultaActual = () => {
                             </div>
                         </div>
                         <div>
-                            <button className="px-4 py-2 bg-green-600 text-white rounded flex items-center">
+                            <button className="px-4 py-2 bg-green-600 hover:bg-green-700 hover:cursor-pointer text-white rounded flex items-center">
                                 <i className="bi bi-plus-circle mr-2"></i>
                                 Agregar
                             </button>
