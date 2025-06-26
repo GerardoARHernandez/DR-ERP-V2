@@ -8,18 +8,18 @@ const Home = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="max-w-6xl mx-auto px-4 py-6">
-            <h2 className="text-3xl mb-6 font-bold text-center text-gray-800">Panel del Paciente</h2>
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 py-4 sm:py-6">
+            <h2 className="text-2xl sm:text-3xl mb-4 sm:mb-6 font-bold text-center text-gray-800">Panel del Paciente</h2>
 
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
+            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg">
                 {/* Sección de Búsqueda/Nuevo Paciente */}
-                <div className="mb-8">
-                    <h3 className="text-xl font-semibold text-gray-700 mb-4">Buscar Paciente</h3>
-                    <div className="flex gap-3 items-center">
+                <div className="mb-6 sm:mb-8">
+                    <h3 className="text-lg sm:text-xl font-semibold text-gray-700 mb-3 sm:mb-4">Buscar Paciente</h3>
+                    <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
                         <input
                             type="text"
                             placeholder="Nombre o ID del paciente"
-                            className="flex-1 border-2 border-gray-300 rounded-lg px-4 py-2 transition-all 
+                            className="flex-1 border-2 border-gray-300 rounded-lg px-3 sm:px-4 py-2 transition-all 
                                       focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
                         />
                         <button
@@ -27,26 +27,26 @@ const Home = () => {
                                 e.preventDefault();
                                 navigate('/nuevo');
                             }}
-                            className="flex items-center gap-2 px-4 py-2 font-medium rounded-lg bg-[#4a8aa2] text-white hover:bg-[#3f7a8c] tranition-colors duration-200 shadow-md hover:shadow-lg hover:cursor-pointer"
+                            className="flex items-center justify-center gap-2 px-4 py-2 font-medium rounded-lg bg-[#4a8aa2] text-white hover:bg-[#3f7a8c] transition-colors duration-200 shadow-md hover:shadow-lg hover:cursor-pointer"
                         >
                             <CiCirclePlus className="text-xl" />
-                            <span>Nuevo Paciente</span>
+                            <span className="whitespace-nowrap">Nuevo Paciente</span>
                         </button>
                     </div>
                 </div>
 
                 {/* Sección de Datos del Paciente */}
-                <div className="mb-8 bg-gray-50 p-4 rounded-lg">
-                    <div className="flex justify-between items-center mb-3">
-                        <h3 className="text-xl font-semibold text-gray-700">Datos Generales</h3>
-                        <button className="flex items-center gap-1 px-3 py-1  rounded-lg bg-[#4a8aa2] text-white hover:bg-[#3f7a8c] transition-colors">
+                <div className="mb-6 sm:mb-8 bg-gray-50 p-3 sm:p-4 rounded-lg">
+                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-3 gap-2 sm:gap-0">
+                        <h3 className="text-lg sm:text-xl font-semibold text-gray-700">Datos Generales</h3>
+                        <button className="flex items-center gap-1 px-3 py-1 rounded-lg bg-[#4a8aa2] text-white hover:bg-[#3f7a8c] transition-colors">
                             <PiNotePencil />
                             <span>Editar</span>
                         </button>
                     </div>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        <div className="bg-white p-3 rounded-lg shadow-sm">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+                        <div className="bg-white p-2 sm:p-3 rounded-lg shadow-sm">
                             <h4 className="font-medium text-gray-500">Información Básica</h4>
                             <ul className="mt-2 space-y-1">
                                 <li className="flex justify-between">
@@ -101,7 +101,7 @@ const Home = () => {
                         </div>
                     </div>
                     
-                    <div className="mt-4 flex justify-end">
+                    <div className="mt-3 sm:mt-4 flex justify-end">
                         <button
                             onClick={(e) => {
                                 e.preventDefault();

@@ -162,13 +162,14 @@ const Nuevo = () => {
                     <div className="flex justify-end space-x-4 pt-4">
                         <button
                             type="button"
-                            className="px-6 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition"
+                            className="px-6 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition hover:cursor-pointer"
+                            onClick={() => window.history.back()}
                         >
                             Cancelar
                         </button>
                         <button
                             type="submit"
-                            className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center"
+                            className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center hover:cursor-pointer"
                         >
                             <FaSave className="mr-2" />
                             Guardar Paciente
